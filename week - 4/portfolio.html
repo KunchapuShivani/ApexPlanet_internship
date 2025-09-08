@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#todo">To-Do App</a></li>
+        <li><a href="#products">Product Page</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello 👋 I’m Shivani, a B.Tech CSE (Data Science) student and web developer.  
+       This portfolio showcases my mini-projects: a To-Do App and a Product Listing Page.</p>
+  </section>
+
+  <!-- To-Do App -->
+  <section id="todo">
+    <h2>📌 To-Do List</h2>
+    <input type="text" id="task" placeholder="Enter task">
+    <button onclick="addTask()">Add</button>
+    <ul id="list"></ul>
+  </section>
+
+  <!-- Product Listing -->
+  <section id="products">
+    <h2>🛍️ Product Listing</h2>
+    <div class="filters">
+      <label>Category:
+        <select id="category" onchange="renderProducts()">
+          <option value="all">All</option>
+          <option value="electronics">Electronics</option>
+          <option value="fashion">Fashion</option>
+        </select>
+      </label>
+      <label>Sort By:
+        <select id="sort" onchange="renderProducts()">
+          <option value="none">None</option>
+          <option value="price">Price</option>
+          <option value="rating">Rating</option>
+        </select>
+      </label>
+    </div>
+    <div class="products" id="product-list"></div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>📩 Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="4" placeholder="Your Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <script src="portfolio.js"></script>
+</body>
+</html>
