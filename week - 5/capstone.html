@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capstone Shop</title>
+  <link rel="stylesheet" href="capstone.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Capstone<span>Shop</span></h1>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#cart">Cart</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Shop Smart, Live Better</h2>
+      <p>Discover amazing products at unbeatable prices.</p>
+      <button onclick="scrollToProducts()">Shop Now</button>
+    </div>
+  </section>
+
+  <!-- Product Section -->
+  <section id="products" class="product-list">
+    <h2>Our Bestsellers</h2>
+    <div class="grid">
+      <div class="product-card">
+        <img src="images/laptop.jpg" alt="LAPTOP" loading="lazy">
+        <h3>HP Laptop</h3>
+        <p>65,000/-</p>
+        <button onclick="addToCart('Laptop', 65000)">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="images/Runnshoes.jpg" alt="RUNNING SHOES" loading="lazy">
+        <h3>Running Shoes</h3>
+        <p>2500/-</p>
+        <button onclick="addToCart('Running Shoes', 2500)">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="images/mobile.jpg" alt="Smart Phone" loading="lazy">
+        <h3>Mobile</h3>
+        <p>30000/-</p>
+        <button onclick="addToCart('Mobile', 30000)">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cart Section -->
+  <section id="cart">
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <p id="total">Total:0</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 CapstoneShop | Designed with ❤️</p>
+  </footer>
+
+  <script src="capstone.js"></script>
+</body>
+</html>
